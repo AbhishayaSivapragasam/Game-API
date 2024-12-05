@@ -1,0 +1,120 @@
+/* Main container styling */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+   /* background: linear-gradient(to bottom right, #e0f7fa, #80deea);
+    font-family: Arial, sans-serif;
+    color: #333;
+  */
+}
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .image-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video fills the screen */
+    z-index: -1; /* Places the video behind other content */
+  }
+
+/* Timer styling */
+.game-container p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000000; /* Red color to highlight the timer */
+    background-color: #ffd500;
+    
+}
+
+/* Question section */
+.game-container h3 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    color: #ffffff;
+    background-color:  #a90e68;
+}
+
+.game-container img {
+    width: 650px;
+    height: 300px;
+    border: 2px solid #0097a7;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+/* Button container */
+.game-container div:last-of-type {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Button styling */
+.game-container button {
+    width: 60px;
+    height: 60px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #a90e68;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.game-container button:hover {
+    background-color: #0097a7;
+    transform: scale(1.1);
+}
+
+.game-container button:active {
+    background-color: #00796b;
+}
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* Disabled button (if needed for future enhancements) */
+.game-container button:disabled {
+    background-color: #bdbdbd;
+    cursor: not-allowed;
+}
+
+/* Mobile responsive styling */
+@media (max-width: 600px) {
+    .game-container {
+        padding: 20px;
+    }
+
+    .game-container img {
+        width: 80%;
+    }
+
+    .game-container button {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+    }
+}
